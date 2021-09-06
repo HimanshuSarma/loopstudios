@@ -1,0 +1,102 @@
+.vr-section {
+  margin: 7rem 0;
+      grid-template-areas: "... vr-section-content ...";
+  position: relative;
+  z-index: 5;
+}
+
+.vr-section-content {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: vr-section-content;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: calc(60% - 1rem) calc(40% - 1rem);
+      grid-template-columns: calc(60% - 1rem) calc(40% - 1rem);
+      grid-template-areas: "img content";
+  grid-column-gap: 2rem;
+}
+
+.vr-section-img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: img;
+  position: relative;
+  z-index: 3;
+}
+
+.vr-section-details {
+  width: 130%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background-color: white;
+  position: relative;
+  z-index: 5;
+  -webkit-transform: translate(-12vw, 2px);
+          transform: translate(-12vw, 2px);
+  padding: 5vw 5vw 0;
+}
+
+.vr-section-details-heading {
+  margin: 0;
+  margin-bottom: 1.5rem;
+  font-size: 2.125rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.vr-section-details-desc {
+  font-size: 0.825rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.375rem;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 63.75em) {
+  .vr-section-details-desc {
+    font-size: 0.925rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width: 55.625em) {
+  .vr-section-content {
+    -ms-grid-columns: 70%;
+        grid-template-columns: 70%;
+        grid-template-areas: "img" "content";
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .vr-section-details {
+    width: 80%;
+    -webkit-transform: translate(0, 2px);
+            transform: translate(0, 2px);
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 40.9375em) {
+  .vr-section-details {
+    width: 100%;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .vr-section-content {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+}
+
+@media (min-width: 100em) {
+  .vr-section-details {
+    -webkit-transform: translate(-32%, 2px);
+            transform: translate(-32%, 2px);
+    padding: 5rem 5rem 0 5rem;
+  }
+}
+/*# sourceMappingURL=VRSection.css.map */

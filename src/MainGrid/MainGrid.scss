@@ -1,0 +1,4 @@
+.main-grid {
+    display: grid;
+    grid-template-columns: minmax(var(--side-gaps), 1fr) minmax(0, 70rem) minmax(var(--side-gaps), 1fr);
+}

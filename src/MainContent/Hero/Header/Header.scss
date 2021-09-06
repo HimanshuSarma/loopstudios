@@ -1,0 +1,49 @@
+@import '../../../Scss/Mixins/flexMixins.scss';
+
+.header {
+    grid-area: header;
+    margin-bottom: 10vh;
+    @include flex-r-j-sb-a-c;
+    &-logo {
+        color: white;
+        margin: 0
+    }
+    &-nav-btns {
+        @include flex-r-j-c-as-fe;
+        column-gap: 1.5rem;
+        transform: translateY(-5px);
+    }
+    &-ham-menu {
+        display: none;
+        cursor: pointer;
+    }
+}
+
+
+// 1120px
+@media (max-width: 71em) {
+    .header-nav-btns {
+        display: none;
+    }
+    .header-ham-menu {
+        display: grid;
+        width: 1.8rem;
+        height: 1.5rem;
+        &-mid,
+        &-top,
+        &-bottom {
+            width: 100%;
+            height: 0.1rem;
+            background-color: white;
+        }
+        &-mid {
+            align-self: center;
+        }
+        &-top {
+            align-self: flex-start;
+        }
+        &-bottom {
+            align-self: flex-end;
+        }
+    }
+}
